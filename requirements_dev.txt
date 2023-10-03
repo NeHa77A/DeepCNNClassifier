@@ -4,6 +4,11 @@ pandas
 notebook
 matplotlib
 seaborn
+python-box
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
 -e .
 
 
