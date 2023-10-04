@@ -2,4 +2,4 @@
 
 ## Workflow
 
-![workflow](https://raw.githubusercontent.com/NeHa77A/DeepCNNClassifier/master/images/process%20flow.png)
+![workflow](https://raw.githubusercontent.com/NeHa77A/DeepCNNClassifier/master/images/Project%20flow.png)
