@@ -1,4 +1,4 @@
 # Deep Classifer Project
 
 ## Workflow
-1. Update Config.yaml
+![]("images/process flow.png")
