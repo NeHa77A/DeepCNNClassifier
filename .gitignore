@@ -168,3 +168,5 @@ artifacts/prepare_callbacks/checkpoint_dir/model.h5
 artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-10-07-14-08-16/train/events.out.tfevents.1696667903.LAPTOP-NFQ6STJD.880.0.v2
 artifacts/prepare_callbacks/tensorboard_log_dir/tb_logs_at_2023-10-07-14-08-16/validation/events.out.tfevents.1696674666.LAPTOP-NFQ6STJD.880.1.v2
 artifacts/training/model.h5
+artifacts/prepare_base_model/base_model_updated.h5
+artifacts/prepare_base_model/base_model.h5
