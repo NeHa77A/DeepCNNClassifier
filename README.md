@@ -25,3 +25,8 @@ if error occur then again run
 ```
 tox --recreate
 ```
+
+### tensorboard 
+```
+tensorboard --logdir=artifacts/prepare_callbacks/tensorboard_log_dir/
+```
