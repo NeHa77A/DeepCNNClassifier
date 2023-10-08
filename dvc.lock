@@ -17,3 +17,69 @@ stages:
       md5: 3a5cf86541f22c236620ce5b952ad684.dir
       size: 848866410
       nfiles: 24998
+  prepare_base_model:
+    cmd: python src/DeepClassifier/pipeline/prepare_base_model_stage2.py
+    deps:
+    - path: configs/config.yaml
+      hash: md5
+      md5: d8d3bc69ef3c58f3b43809297d17b64a
+      size: 829
+    - path: src/DeepClassifier/pipeline/prepare_base_model_stage2.py
+      hash: md5
+      md5: fc36c3a4e665b927629499379c2d2505
+      size: 791
+    params:
+      params.yaml:
+        CLASSES: 2
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 4ae78d6550f4a9a190394ff6568a0df1.dir
+      size: 118059248
+      nfiles: 2
+  training:
+    cmd: python src/DeepClassifier/pipeline/training_stage3.py
+    deps:
+    - path: artifacts/data_ingestion/PetImages
+      hash: md5
+      md5: 3a5cf86541f22c236620ce5b952ad684.dir
+      size: 848866410
+      nfiles: 24998
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 4ae78d6550f4a9a190394ff6568a0df1.dir
+      size: 118059248
+      nfiles: 2
+    - path: configs/config.yaml
+      hash: md5
+      md5: d8d3bc69ef3c58f3b43809297d17b64a
+      size: 829
+    - path: src/DeepClassifier/components/prepare_callback.py
+      hash: md5
+      md5: 522abfbb7ed5aeb105d322eba23c411f
+      size: 1008
+    - path: src/DeepClassifier/pipeline/training_stage3.py
+      hash: md5
+      md5: e25d952b3ee322a1f96a85d5c7f57018
+      size: 999
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        BATCH_SIZE: 16
+        EPOCHS: 1
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training/model.h5
+      hash: md5
+      md5: 8d0c2495d98f63aa3c4f901cfdc23d92
+      size: 59340720
