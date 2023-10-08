@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/DeepClassifier/pipeline/data_ingestion_stage1.py
+    deps:
+    - path: configs/config.yaml
+      hash: md5
+      md5: d8d3bc69ef3c58f3b43809297d17b64a
+      size: 829
+    - path: src/DeepClassifier/pipeline/data_ingestion_stage1.py
+      hash: md5
+      md5: da351913656923acb795781e81641bd0
+      size: 756
+    outs:
+    - path: artifacts/data_ingestion/PetImages
+      hash: md5
+      md5: 3a5cf86541f22c236620ce5b952ad684.dir
+      size: 848866410
+      nfiles: 24998

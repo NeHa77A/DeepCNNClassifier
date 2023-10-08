@@ -30,3 +30,8 @@ tox --recreate
 ```
 tensorboard --logdir=artifacts/prepare_callbacks/tensorboard_log_dir/
 ```
+
+### dvc run
+```
+dvc repro
+```
