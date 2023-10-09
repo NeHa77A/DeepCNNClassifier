@@ -38,6 +38,10 @@ dvc init
 ```
 dvc repro
 ```
+diagram show
+```
+dvc dag
+```
 
 ### check which python is in your system
 ```bash
