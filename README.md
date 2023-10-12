@@ -74,3 +74,8 @@ for running mlflow
 ```
 mlflow ui
 ```
+
+### Run
+```
+streamlit run prediction_service/app.py
+```
