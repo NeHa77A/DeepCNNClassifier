@@ -57,3 +57,20 @@ conda init bash
 echo '. ${HOME}/.bash_profile' >> ~/.bashrc
 ```
 then close bash and open agian 
+
+Add your info connect the dagshub with github
+```bash
+export MLFLOW_TRACKING_URI=https://dagshub.com/NeHa77A/DeepCNNClassifier.mlflow \
+```
+```bash
+export MLFLOW_TRACKING_USERNAME=NeHa77A \
+```
+```bash
+export MLFLOW_TRACKING_PASSWORD=<password>
+```
+python script.py
+
+for running mlflow 
+```
+mlflow ui
+```
